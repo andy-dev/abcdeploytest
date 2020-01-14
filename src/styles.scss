@@ -1,0 +1,142 @@
+html,
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  -ms-overflow-style: scrollbar;
+}
+
+body {
+  background: #f6f6f6;
+  font-family: "Work Sans", sans-serif;
+  // hide right side-nav
+  overflow-x: hidden;
+}
+
+// typography start
+:root {
+  --base-size: 0.8em;
+  --type-scale: 1.25;
+  --h5: calc(var(--base-size) * var(--type-scale));
+  --h4: calc(var(--h5) * var(--type-scale));
+  --h3: calc(var(--h4) * var(--type-scale));
+  --h2: calc(var(--h3) * var(--type-scale));
+  --h1: calc(var(--h2) * var(--type-scale));
+}
+
+p {
+  font-size: var(--base-size);
+  font-weight: 300;
+}
+
+h5 {
+  font-size: var(--h5);
+  font-weight: 200;
+  font-family: "BioRhyme", serif;
+  color: #00539b;
+}
+
+h4 {
+  font-size: var(--h4);
+  font-weight: 200;
+  font-family: "BioRhyme", serif;
+  color: #00539b;
+}
+
+h3 {
+  font-size: var(--h3);
+  font-weight: 200;
+  font-family: "BioRhyme", serif;
+  color: #00539b;
+}
+
+h2 {
+  font-size: var(--h2);
+  font-weight: 200;
+  font-family: "BioRhyme", serif;
+  color: #00539b;
+}
+
+h1 {
+  font-size: var(--h1);
+  font-weight: 200;
+  font-family: "BioRhyme", serif;
+  color: #00539b;
+}
+
+small,
+.text_small {
+  font-size: calc(var(--base-size) / var(--type-scale));
+  font-weight: 300;
+}
+
+@media screen and (max-width: 555px) {
+  :root {
+    --base-size: 0.6em;
+  }
+}
+
+/*remove input clear x from ie*/
+input[type="text"]::-ms-clear {
+  display: none !important;
+}
+input::-ms-clear {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+// top nav bar
+.top-hat {
+  background: #f2f2f2;
+  color: #636466;
+  font-size: 15px;
+}
+
+.top-hat-links {
+  padding: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.top-hat-user-link {
+  padding: 10px;
+  text-align: right;
+}
+
+// side nav bar
+.side-nav {
+  position: absolute;
+  display: inline-block;
+  height: 100vh;
+  width: 15%;
+  background: #00539b;
+  z-index: 100;
+  transform: translateX(-100%);
+}
+
+// side nav bar
+.right-nav {
+  position: absolute;
+  display: inline-block;
+  height: 100vh;
+  width: 30%;
+  background: #f6f6f6;
+  z-index: 100;
+  transform: translateX(350%);
+}
+
+.right-nav-small {
+  height: 40vh;
+  background: #ffffff;
+  width: 300px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.debug {
+  outline: 2px solid red;
+}
