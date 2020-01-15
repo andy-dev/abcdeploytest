@@ -1,8 +1,11 @@
 import React, { useContext } from "react";
 import { render } from "react-dom";
 
-// Context
+// Providers
 import UserProvider from "./providers/UserProvider.js";
+import UIProvider from "./providers/UIProvider.js";
+
+// Context
 import { UserContext } from "./providers/UserProvider.js";
 
 // Containers
@@ -29,7 +32,9 @@ const App = () => {
 
 render(
   <UserProvider>
-    <App></App>
+    <UIProvider>
+      <App></App>
+    </UIProvider>
   </UserProvider>,
   document.getElementById("root")
 );

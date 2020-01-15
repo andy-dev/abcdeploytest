@@ -5,8 +5,8 @@ class SideNav extends Component {
   sideNav = null;
   myTween = new TimelineLite({ paused: true });
 
-  toggleSideNav = sideNavOpen => {
-    if (sideNavOpen) {
+  toggleSideNav = sideNavOpenClose => {
+    if (sideNavOpenClose) {
       this.myTween.to(this.sideNav, 1, { x: "0%" }).play();
     } else {
       this.myTween.to(this.sideNav, 1, { x: "-100%" }).play();
@@ -14,8 +14,8 @@ class SideNav extends Component {
   };
 
   componentDidUpdate(prevProps) {
-    if (prevProps.sideNavOpen !== this.props.sideNavOpen) {
-      this.toggleSideNav(this.props.sideNavOpen);
+    if (prevProps.sideNavOpenClose !== this.props.sideNavOpenClose) {
+      this.toggleSideNav(this.props.sideNavOpenClose);
     }
   }
 

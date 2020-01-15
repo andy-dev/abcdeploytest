@@ -11,7 +11,7 @@ class UserProvider extends Component {
     // fetch or get current user
     setTimeout(() => {
       this.setState({ user: "Andy" });
-    }, 2000);
+    }, 200);
   }
 
   updateValue = (key, val) => {
