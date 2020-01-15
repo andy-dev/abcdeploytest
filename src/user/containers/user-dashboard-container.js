@@ -4,11 +4,11 @@ import SideNav from "../../common/side-nav.js";
 import { UIContext } from "../../providers/UIProvider.js";
 
 const UserDashboardContainer = () => {
-  const { sideNavOpenClose } = useContext(UIContext);
+  const { sideNavOpenClose, toggleUIComponent } = useContext(UIContext);
 
   return (
     <>
-      <TopHat></TopHat>
+      <TopHat toggleUIComponent={toggleUIComponent}></TopHat>
       <SideNav sideNavOpenClose={sideNavOpenClose}></SideNav>
       <h1>User Dashboard Container</h1>
     </>

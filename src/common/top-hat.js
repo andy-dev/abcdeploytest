@@ -1,19 +1,15 @@
 import React, { useContext } from "react";
 import { css } from "@emotion/core";
+import { navigate } from "@reach/router";
 import { FiMenu, FiHome } from "react-icons/fi";
 
-// Context
-import { UIContext } from "../providers/UIProvider.js";
-
-const TopHat = () => {
-  const { toggleUIComponent } = useContext(UIContext);
-
+const TopHat = props => {
   const toggleSideNav = () => {
-    toggleUIComponent("sideNavOpenClose");
+    props.toggleUIComponent("sideNavOpenClose");
   };
 
   const refreshPage = () => {
-    window.location.reload(false);
+    navigate("/");
   };
 
   return (
