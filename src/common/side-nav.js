@@ -1,21 +1,17 @@
 import React, { Component } from "react";
-import { gsap, TimelineLite } from "gsap";
+import { TimelineLite } from "gsap";
 
 class SideNav extends Component {
-  constructor(props) {
-    super(props);
+  sideNav = null;
+  myTween = new TimelineLite({ paused: true });
 
-    this.sideNav = null;
-    this.myTween = new TimelineLite({ paused: true });
-  }
-
-  toggleSideNav(sideNavOpen) {
+  toggleSideNav = sideNavOpen => {
     if (sideNavOpen) {
       this.myTween.to(this.sideNav, 1, { x: "0%" }).play();
     } else {
       this.myTween.to(this.sideNav, 1, { x: "-100%" }).play();
     }
-  }
+  };
 
   componentDidUpdate(prevProps) {
     if (prevProps.sideNavOpen !== this.props.sideNavOpen) {

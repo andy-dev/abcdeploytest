@@ -44,6 +44,6 @@
     "react-icons": "^3.8.0"
   },
   "browserslist": [
-    "last 1 Chrome versions"
+    "last 2 Chrome versions"
   ]
 }

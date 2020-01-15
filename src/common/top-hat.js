@@ -3,10 +3,6 @@ import { css } from "@emotion/core";
 import { FiMenu, FiHome } from "react-icons/fi";
 
 class TopHat extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   toggleSideNav = () => {
     this.props.toggleSideNav();
   };

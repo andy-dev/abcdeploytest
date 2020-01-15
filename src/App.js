@@ -8,21 +8,15 @@ import { Router } from "@reach/router";
 import UserProvider from "./providers/UserProvider";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    sideNavOpen: false
+  };
 
-    this.state = {
-      sideNavOpen: false
-    };
-
-    this.toggleSideNav = this.toggleSideNav.bind(this);
-  }
-
-  toggleSideNav() {
+  toggleSideNav = () => {
     this.setState({
       sideNavOpen: !this.state.sideNavOpen
     });
-  }
+  };
 
   render() {
     return (
