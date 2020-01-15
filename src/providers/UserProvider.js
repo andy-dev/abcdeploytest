@@ -1,16 +1,17 @@
 import React, { Component, createContext } from "react";
 
-export const UserContext = createContext();
+export const UserContext = createContext({ user: null });
 
 class UserProvider extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    user: null
+  };
 
-    this.state = {
-      user: "andy",
-      source: null,
-      target: null
-    };
+  componentDidMount() {
+    // fetch or get current user
+    setTimeout(() => {
+      this.setState({ user: "Andy" });
+    }, 2000);
   }
 
   updateValue = (key, val) => {
@@ -18,14 +19,17 @@ class UserProvider extends Component {
   };
 
   render() {
+    const { user } = this.state;
+    const { children } = this.props;
+
     return (
       <UserContext.Provider
         value={{
-          state: this.state,
+          user: user,
           updateValue: this.updateValue
         }}
       >
-        {this.props.children}
+        {children}
       </UserContext.Provider>
     );
   }

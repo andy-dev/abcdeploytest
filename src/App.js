@@ -1,34 +1,35 @@
-import React, { Component, useContext } from "react";
+import React, { useContext } from "react";
 import { render } from "react-dom";
-import TopHat from "./common/top-hat.js";
-import SideNav from "./common/side-nav.js";
-import { Router } from "@reach/router";
 
 // Context
-import UserProvider from "./providers/UserProvider";
+import UserProvider from "./providers/UserProvider.js";
+import { UserContext } from "./providers/UserProvider.js";
 
-class App extends Component {
-  state = {
-    sideNavOpen: false
-  };
+// Containers
+import UserRoutingContainer from "./user/containers/user-routing-container.js";
+import PublicRoutingContainer from "./public/containers/public-routing-container.js";
 
-  toggleSideNav = () => {
-    this.setState({
-      sideNavOpen: !this.state.sideNavOpen
-    });
-  };
+const App = () => {
+  const { user } = useContext(UserContext);
 
-  render() {
+  if (user !== null) {
     return (
-      <>
-        <UserProvider>
-          <TopHat toggleSideNav={this.toggleSideNav}></TopHat>
-          <SideNav sideNavOpen={this.state.sideNavOpen}></SideNav>
-          <p>Deployment Worked</p>
-        </UserProvider>
-      </>
+      <React.StrictMode>
+        <UserRoutingContainer user={user} />
+      </React.StrictMode>
+    );
+  } else {
+    return (
+      <React.StrictMode>
+        <PublicRoutingContainer />
+      </React.StrictMode>
     );
   }
-}
+};
 
-render(<App></App>, document.getElementById("root"));
+render(
+  <UserProvider>
+    <App></App>
+  </UserProvider>,
+  document.getElementById("root")
+);
