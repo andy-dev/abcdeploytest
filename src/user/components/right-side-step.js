@@ -8,7 +8,7 @@ const RightSideStep = () => {
   return (
     <>
       <Router>
-        <RightStep path=":stepNumber/substep/:subStepNumber"></RightStep>
+        <RightStep path=":stepNumber/stepOption/:optionNumber/optionSubStep/:optionSubStepNumber"></RightStep>
         <RightStep path=":stepNumber"></RightStep>
       </Router>
     </>

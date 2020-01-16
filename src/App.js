@@ -3,6 +3,7 @@ import { render } from "react-dom";
 
 // Providers
 import UserProvider from "./providers/UserProvider.js";
+import DataProvider from "./providers/DataProvider.js";
 import UIProvider from "./providers/UIProvider.js";
 
 // Context
@@ -32,9 +33,11 @@ const App = () => {
 
 render(
   <UserProvider>
-    <UIProvider>
-      <App></App>
-    </UIProvider>
+    <DataProvider>
+      <UIProvider>
+        <App></App>
+      </UIProvider>
+    </DataProvider>
   </UserProvider>,
   document.getElementById("root")
 );

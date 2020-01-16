@@ -6,6 +6,9 @@ export const mainRoute = [
       "Name of the system from where this data is extracted ? (Select Source System)",
     stepOptions: [
       {
+        optionNumber: 1,
+        optionSize: "medium",
+        optionIcon: "database",
         optionName: "File Source",
         optionMetaData:
           "File Source simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Le",
@@ -19,6 +22,9 @@ export const mainRoute = [
         ]
       },
       {
+        optionNumber: 2,
+        optionSize: "medium",
+        optionIcon: "database",
         optionName: "SAPBW",
         optionMetaData:
           "SAPBW simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Le",
@@ -32,6 +38,9 @@ export const mainRoute = [
         ]
       },
       {
+        optionNumber: 3,
+        optionSize: "medium",
+        optionIcon: "database",
         optionName: "SAPECC",
         optionMetaData:
           "SAPECC simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Le",
@@ -45,6 +54,9 @@ export const mainRoute = [
         ]
       },
       {
+        optionNumber: 4,
+        optionSize: "medium",
+        optionIcon: "database",
         optionName: "PKMS",
         optionMetaData:
           "PKMS simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Le",
@@ -58,6 +70,9 @@ export const mainRoute = [
         ]
       },
       {
+        optionNumber: 5,
+        optionSize: "medium",
+        optionIcon: "database",
         optionName: "SFDC",
         optionMetaData:
           "SFDC simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Le",
@@ -71,6 +86,9 @@ export const mainRoute = [
         ]
       },
       {
+        optionNumber: 6,
+        optionSize: "medium",
+        optionIcon: "database",
         optionName: "OTHER",
         optionMetaData:
           "OTHER simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Le",
@@ -91,6 +109,9 @@ export const mainRoute = [
     stepQuestion: "Select Target",
     stepOptions: [
       {
+        optionNumber: 1,
+        optionSize: "medium",
+        optionIcon: "database",
         optionName: "File Source",
         optionMetaData:
           "File Source simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Le",
@@ -104,6 +125,9 @@ export const mainRoute = [
         ]
       },
       {
+        optionNumber: 2,
+        optionSize: "medium",
+        optionIcon: "database",
         optionName: "SAPBW",
         optionMetaData:
           "SAPBW simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Le",
@@ -117,8 +141,11 @@ export const mainRoute = [
         ]
       },
       {
-        name: "SAPECC",
-        metaData:
+        optionNumber: 3,
+        optionSize: "medium",
+        optionIcon: "database",
+        optionName: "SAPECC",
+        optionMetaData:
           "SAPECC simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Le",
         optionSubSteps: [
           {
@@ -130,8 +157,11 @@ export const mainRoute = [
         ]
       },
       {
-        name: "PKMS",
-        metaData:
+        optionNumber: 4,
+        optionSize: "medium",
+        optionIcon: "database",
+        optionName: "PKMS",
+        optionMetaData:
           "PKMS simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Le",
         optionSubSteps: [
           {
@@ -143,8 +173,11 @@ export const mainRoute = [
         ]
       },
       {
-        name: "SFDC",
-        metaData:
+        optionNumber: 5,
+        optionSize: "medium",
+        optionIcon: "database",
+        optionName: "SFDC",
+        optionMetaData:
           "SFDC simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Le",
         optionSubSteps: [
           {
@@ -156,8 +189,11 @@ export const mainRoute = [
         ]
       },
       {
-        name: "OTHER",
-        metaData:
+        optionNumber: 6,
+        optionSize: "medium",
+        optionIcon: "database",
+        optionName: "OTHER",
+        optionMetaData:
           "OTHER simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Le",
         optionSubSteps: [
           {
@@ -176,6 +212,9 @@ export const mainRoute = [
     stepQuestion: null,
     stepOptions: [
       {
+        optionNumber: 1,
+        optionSize: "medium",
+        optionIcon: "database",
         optionName: null,
         optionMetaData: null,
         optionSubSteps: [
