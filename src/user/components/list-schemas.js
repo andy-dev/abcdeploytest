@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import SingleSelect from "../../common/single-select.js";
+import AbcButton from "../../common/abc-button.js";
 
 import { css } from "@emotion/core";
 
 class ListSchemas extends Component {
   state = {
-    tableSelected: "",
+    schemaSelected: "",
     items: [
       { name: "Schema 1" },
       { name: "Schema 2" },
@@ -60,9 +61,8 @@ class ListSchemas extends Component {
     ]
   };
 
-  chooseTable = selection => {
-    console.log(selection);
-    this.setState({ tableSelected: selection });
+  chooseSchema = selection => {
+    this.setState({ schemaSelected: selection });
   };
 
   render() {
@@ -72,16 +72,19 @@ class ListSchemas extends Component {
           items={this.state.items}
           label="Select Schema From Options"
           placeholder="Search for Schema"
-          customHandler={this.chooseTable}
+          customHandler={this.chooseSchema}
         ></SingleSelect>
-        {this.state.tableSelected !== "" && (
+        {this.state.schemaSelected !== "" && (
           <div
             css={css`
               margin-top: 10px;
               padding: 20px;
             `}
           >
-            <p>ok proceed</p>
+            <AbcButton
+              buttonLabel="Next"
+              OnButtonClickCB={this.props.goToNextOptionSubStep}
+            ></AbcButton>
           </div>
         )}
       </>

@@ -12,7 +12,7 @@ class UIProvider extends Component {
     modalOpenClose: false,
     sideNavOpenClose: false,
     metaDataPanelOpenClose: false,
-    rightStepOpenClose: true
+    rightStepOpenClose: false
   };
 
   componentDidMount() {

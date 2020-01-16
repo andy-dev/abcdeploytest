@@ -8,36 +8,60 @@ import ListSchemas from "./list-schemas.js";
 
 const RightStep = props => {
   const {
+    currentStepOption,
     currentOptionSubStep,
     updateCurrentStepOption,
     clearOptionSubStep
   } = useContext(DataContext);
 
-  console.log(currentOptionSubStep);
-
+  const { rightStepOpenClose, toggleUIComponent } = useContext(UIContext);
   const [currentStepOptionNumber, updateCurrentStepOptionNumber] = useState(
-    "1"
+    null
   );
 
   useEffect(() => {
-    console.log(props.optionNumber);
+    // url has optionNumber then get option
     if (
       props.optionNumber !== undefined &&
       props.optionNumber !== currentStepOptionNumber
     ) {
       updateCurrentStepOptionNumber(props.optionNumber);
-
       updateCurrentStepOption(props.stepNumber, props.optionNumber);
+
+      // open right step
+      if (rightStepOpenClose === false) {
+        toggleUIComponent("rightStepOpenClose");
+      }
     }
 
     // user goes back or url changes and route no longer has optionNumber
     if (props.optionNumber === undefined && currentOptionSubStep !== null) {
+      if (rightStepOpenClose === true) {
+        // close
+        toggleUIComponent("rightStepOpenClose");
+      }
       clearOptionSubStep();
     }
   });
 
   const closeRightSideStep = () => {
     toggleUIComponent("rightStepOpenClose");
+  };
+
+  const goToNextOptionSubStep = () => {
+    let numberOfOptionSubSteps = currentStepOption.optionSubSteps.length;
+    let currentOptionSubStepNumber = currentOptionSubStep.optionSubStepNumber;
+
+    if (numberOfOptionSubSteps > currentOptionSubStepNumber) {
+      navigate(`${currentOptionSubStepNumber + 1}`);
+    } else {
+      goToNextStep();
+    }
+  };
+
+  const goToNextStep = () => {
+    let stepNumber = parseInt(props.stepNumber, 10);
+    navigate(`/step/${stepNumber + 1}`);
   };
 
   return (
@@ -79,12 +103,17 @@ const RightStep = props => {
           <div>
             {/* file chooser */}
             {currentOptionSubStep.optionSubStepQuestion === "fileChooser" && (
-              <FileUpload buttonLabel="Choose File"></FileUpload>
+              <FileUpload
+                buttonLabel="Choose File"
+                goToNextOptionSubStep={goToNextOptionSubStep}
+              ></FileUpload>
             )}
             {/* list schemas */}
             {currentOptionSubStep.optionSubStepQuestion === "listSchemas" && (
               <>
-                <ListSchemas></ListSchemas>
+                <ListSchemas
+                  goToNextOptionSubStep={goToNextOptionSubStep}
+                ></ListSchemas>
               </>
             )}
 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FiUpload } from "react-icons/fi";
+import AbcButton from "../../common/abc-button.js";
 
 import { css } from "@emotion/core";
 
@@ -73,11 +74,10 @@ class FileUpload extends Component {
               padding: 20px;
             `}
           >
-            <p>OK PROCEED</p>
-            {/* <AbcButton
+            <AbcButton
               buttonLabel="Next"
-              OnButtonClickCB={this.props.buttonCb}
-            ></AbcButton> */}
+              OnButtonClickCB={this.props.goToNextOptionSubStep}
+            ></AbcButton>
           </div>
         )}
       </>
