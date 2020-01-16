@@ -16,10 +16,10 @@ const SubStep = props => {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   };
 
-  const selectSubStepOption = subStepOptionNumber => {
-    navigate(
-      `/step/${currentStepNumber}/stepOption/${optionNumber}/optionSubStep/${subStepOptionNumber}`
-    );
+  const selectSubStepOption = opt => {
+    console.log("option selected! go to next sub step", opt);
+    // go to next option sub step
+    props.goToNextOptionSubStep();
   };
 
   return (

@@ -76,12 +76,24 @@ class DataProvider extends Component {
     this.setState({
       currentOptionSubStep: this.getOptionSubStep(number, optNumber, 1)
     });
-
-    console.log(this.getOptionSubStep(number, optNumber, 1));
   };
 
-  updateCurrentOptionSubStep = () => {
-    console.log("go to next substep or next step");
+  updateCurrentOptionSubStep = (
+    stepNumber,
+    optionNumber,
+    optionSubStepNumber
+  ) => {
+    let number = parseInt(stepNumber, 10);
+    let optNumber = parseInt(optionNumber, 10);
+    let optSubStepNumber = parseInt(optionSubStepNumber, 10);
+
+    this.setState({
+      currentOptionSubStep: this.getOptionSubStep(
+        number,
+        optNumber,
+        optSubStepNumber
+      )
+    });
   };
 
   clearOptionSubStep = () => {

@@ -12,6 +12,7 @@ const RightStep = props => {
     currentStepOption,
     currentOptionSubStep,
     updateCurrentStepOption,
+    updateCurrentOptionSubStep,
     clearOptionSubStep
   } = useContext(DataContext);
 
@@ -20,10 +21,16 @@ const RightStep = props => {
     null
   );
 
+  const [
+    currentOptionSubStepNumber,
+    updateCurrentOptionSubStepNumber
+  ] = useState(null);
+
   console.log(currentOptionSubStep);
 
   useEffect(() => {
     // url has optionNumber then get option
+    console.log(props);
     if (
       props.optionNumber !== undefined &&
       props.optionNumber !== currentStepOptionNumber
@@ -31,7 +38,20 @@ const RightStep = props => {
       updateCurrentStepOptionNumber(props.optionNumber);
       updateCurrentStepOption(props.stepNumber, props.optionNumber);
 
-      console.log(props.stepNumber, props.optionNumber);
+      // url has changed optionSubStep
+      if (
+        props.optionSubStepNumber !== undefined &&
+        props.optionSubStepNumber !== currentOptionSubStepNumber
+      ) {
+        console.log("geeeeee");
+        updateCurrentOptionSubStepNumber(props.optionSubStepNumber);
+        updateCurrentOptionSubStep(
+          props.stepNumber,
+          props.optionNumber,
+          props.optionSubStepNumber
+        );
+      }
+
       // open right step
       if (rightStepOpenClose === false) {
         toggleUIComponent("rightStepOpenClose");
@@ -44,8 +64,7 @@ const RightStep = props => {
         // close
         toggleUIComponent("rightStepOpenClose");
       }
-      console.log("clearing");
-      clearOptionSubStep();
+      // clearOptionSubStep();
     }
   });
 
@@ -54,14 +73,13 @@ const RightStep = props => {
   };
 
   const goToNextOptionSubStep = () => {
-    let numberOfOptionSubSteps = currentStepOption.optionSubSteps.length;
-    let currentOptionSubStepNumber = currentOptionSubStep.optionSubStepNumber;
-
-    if (numberOfOptionSubSteps > currentOptionSubStepNumber) {
-      navigate(`${currentOptionSubStepNumber + 1}`);
-    } else {
-      goToNextStep();
-    }
+    // let numberOfOptionSubSteps = currentStepOption.optionSubSteps.length;
+    // let currentOptionSubStepNumber = currentOptionSubStep.optionSubStepNumber;
+    // if (numberOfOptionSubSteps > currentOptionSubStepNumber) {
+    //   navigate(`${currentOptionSubStepNumber + 1}`);
+    // } else {
+    //   goToNextStep();
+    // }
   };
 
   const goToNextStep = () => {
@@ -122,7 +140,9 @@ const RightStep = props => {
             {/* normal question */}
             {currentOptionSubStep.optionQuestion !== "listSchemas" &&
               currentOptionSubStep.optionQuestion !== "fileChooser" && (
-                <SubStep></SubStep>
+                <SubStep
+                  goToNextOptionSubStep={goToNextOptionSubStep}
+                ></SubStep>
               )}
 
             {/* <pre>

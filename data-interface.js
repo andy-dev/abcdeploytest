@@ -1,6 +1,5 @@
 export const mainRoute = [
   {
-    stepId: "0837a8f79f4657sdgae8sdj",
     stepNumber: 1,
     stepQuestion:
       "Name of the system from where this data is extracted ? (Select Source System)",
@@ -15,8 +14,7 @@ export const mainRoute = [
         optionSubSteps: [
           {
             optionNumber: 1,
-            optionQuestion: "fileChooser",
-            optionSubStepOptions: []
+            optionQuestion: "fileChooser"
           }
         ]
       },
@@ -30,8 +28,7 @@ export const mainRoute = [
         optionSubSteps: [
           {
             optionNumber: 1,
-            optionQuestion: "listSchemas",
-            optionSubStepOptions: []
+            optionQuestion: "listSchemas"
           }
         ]
       },
@@ -45,8 +42,7 @@ export const mainRoute = [
         optionSubSteps: [
           {
             optionNumber: 1,
-            optionQuestion: "listSchemas",
-            optionSubStepOptions: []
+            optionQuestion: "listSchemas"
           }
         ]
       },
@@ -60,8 +56,7 @@ export const mainRoute = [
         optionSubSteps: [
           {
             optionNumber: 1,
-            optionQuestion: "listSchemas",
-            optionSubStepOptions: []
+            optionQuestion: "listSchemas"
           }
         ]
       },
@@ -75,8 +70,7 @@ export const mainRoute = [
         optionSubSteps: [
           {
             optionNumber: 1,
-            optionQuestion: "listSchemas",
-            optionSubStepOptions: []
+            optionQuestion: "listSchemas"
           }
         ]
       },
@@ -90,15 +84,13 @@ export const mainRoute = [
         optionSubSteps: [
           {
             optionNumber: 1,
-            optionQuestion: "listSchemas",
-            optionSubStepOptions: []
+            optionQuestion: "listSchemas"
           }
         ]
       }
     ]
   },
   {
-    stepId: "0837a8f79f4657sdgae8sdj",
     stepNumber: 2,
     stepQuestion: "Select Target",
     stepOptions: [
@@ -112,8 +104,7 @@ export const mainRoute = [
         optionSubSteps: [
           {
             optionNumber: 1,
-            optionQuestion: "fileChooser",
-            optionSubStepOptions: []
+            optionQuestion: "fileChooser"
           }
         ]
       },
@@ -127,8 +118,7 @@ export const mainRoute = [
         optionSubSteps: [
           {
             optionNumber: 1,
-            optionQuestion: "listSchemas",
-            optionSubStepOptions: []
+            optionQuestion: "listSchemas"
           }
         ]
       },
@@ -142,8 +132,7 @@ export const mainRoute = [
         optionSubSteps: [
           {
             optionNumber: 1,
-            optionQuestion: "listSchemas",
-            optionSubStepOptions: []
+            optionQuestion: "listSchemas"
           }
         ]
       },
@@ -157,8 +146,7 @@ export const mainRoute = [
         optionSubSteps: [
           {
             optionNumber: 1,
-            optionQuestion: "listSchemas",
-            optionSubStepOptions: []
+            optionQuestion: "listSchemas"
           }
         ]
       },
@@ -172,8 +160,7 @@ export const mainRoute = [
         optionSubSteps: [
           {
             optionNumber: 1,
-            optionQuestion: "listSchemas",
-            optionSubStepOptions: []
+            optionQuestion: "listSchemas"
           }
         ]
       },
@@ -187,22 +174,18 @@ export const mainRoute = [
         optionSubSteps: [
           {
             optionNumber: 1,
-            optionQuestion: "listSchemas",
-            optionSubStepOptions: []
+            optionQuestion: "listSchemas"
           }
         ]
       }
     ]
   },
   {
-    stepId: "0837a8f79f4657sdgae8sdj",
     stepNumber: 3,
     stepQuestion: null,
     stepOptions: [
       {
         optionNumber: 1,
-        optionName: null,
-        optionMetaData: null,
         optionSubSteps: [
           {
             optionNumber: 1,
@@ -210,6 +193,7 @@ export const mainRoute = [
               "The ABC Company that owns the dataset to be ingested ?",
             optionSubStepOptions: [
               {
+                optionNumber: 1,
                 optionName: "DnS",
                 optionSize: "medium",
                 optionIcon: "company",
@@ -217,6 +201,7 @@ export const mainRoute = [
                   "DnS Full Load f the printing and typesetting industry. Lorem Ipsum h"
               },
               {
+                optionNumber: 2,
                 optionName: "CnA",
                 optionSize: "medium",
                 optionIcon: "company",
@@ -224,6 +209,7 @@ export const mainRoute = [
                   "CnA Incremental f the printing and typesetting industry. Lorem Ipsum h"
               },
               {
+                optionNumber: 3,
                 optionName: "CORP",
                 optionSize: "medium",
                 optionIcon: "company",
@@ -231,6 +217,7 @@ export const mainRoute = [
                   "CORP Incremental f the printing and typesetting industry. Lorem Ipsum h"
               },
               {
+                optionNumber: 4,
                 optionName: "ABC",
                 optionSize: "medium",
                 optionIcon: "company",
@@ -244,6 +231,7 @@ export const mainRoute = [
             optionQuestion: "Division/BU that owns the data to be ingetsted ?",
             optionSubStepOptions: [
               {
+                optionNumber: 1,
                 optionName: "Finance",
                 optionSize: "small",
                 optionIcon: "database",
@@ -251,6 +239,7 @@ export const mainRoute = [
                   "Finance ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 2,
                 optionName: "ABCD",
                 optionSize: "small",
                 optionIcon: "database",
@@ -258,6 +247,7 @@ export const mainRoute = [
                   "ABCD ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 3,
                 optionName: "AHPC",
                 optionSize: "small",
                 optionIcon: "database",
@@ -265,6 +255,7 @@ export const mainRoute = [
                   "AHPC ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 4,
                 optionName: "ASDH",
                 optionSize: "small",
                 optionIcon: "database",
@@ -272,6 +263,7 @@ export const mainRoute = [
                   "ASDH ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 5,
                 optionName: "BCGS",
                 optionSize: "small",
                 optionIcon: "database",
@@ -279,6 +271,7 @@ export const mainRoute = [
                   "BCGS ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 6,
                 optionSize: "small",
                 optionIcon: "database",
                 optionName: "BSMC",
@@ -286,6 +279,7 @@ export const mainRoute = [
                   "BSMC ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 7,
                 optionName: "CSPM",
                 optionSize: "small",
                 optionIcon: "database",
@@ -293,6 +287,7 @@ export const mainRoute = [
                   "CSPM ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 8,
                 optionName: "DCCP",
                 optionSize: "small",
                 optionIcon: "database",
@@ -300,6 +295,7 @@ export const mainRoute = [
                   "DCCP ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 9,
                 optionName: "DSVC",
                 optionSize: "small",
                 optionIcon: "database",
@@ -307,6 +303,7 @@ export const mainRoute = [
                   "DSVC ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 10,
                 optionName: "GNPM",
                 optionSize: "small",
                 optionIcon: "database",
@@ -314,6 +311,7 @@ export const mainRoute = [
                   "GNPM ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 11,
                 optionName: "GSMR",
                 optionSize: "small",
                 optionIcon: "database",
@@ -321,6 +319,7 @@ export const mainRoute = [
                   "GSMR ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 12,
                 optionName: "HSYS",
                 optionSize: "small",
                 optionIcon: "database",
@@ -328,6 +327,7 @@ export const mainRoute = [
                   "HSYS ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 13,
                 optionName: "IONS",
                 optionSize: "small",
                 optionIcon: "database",
@@ -335,6 +335,7 @@ export const mainRoute = [
                   "IONS ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 14,
                 optionName: "IQSS",
                 optionSize: "small",
                 optionIcon: "database",
@@ -342,6 +343,7 @@ export const mainRoute = [
                   "IQSS ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 15,
                 optionName: "OCSL",
                 optionSize: "small",
                 optionIcon: "database",
@@ -349,6 +351,7 @@ export const mainRoute = [
                   "OCSL ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 16,
                 optionName: "OCSP",
                 optionSize: "small",
                 optionIcon: "database",
@@ -356,6 +359,7 @@ export const mainRoute = [
                   "OCSP ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 16,
                 optionName: "OPERATIONS",
                 optionSize: "small",
                 optionIcon: "database",
@@ -363,6 +367,7 @@ export const mainRoute = [
                   "OPERATIONS ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 17,
                 optionName: "PHCS",
                 optionSize: "small",
                 optionIcon: "database",
@@ -370,6 +375,7 @@ export const mainRoute = [
                   "PHCS ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 18,
                 optionName: "PHMC",
                 optionSize: "small",
                 optionIcon: "database",
@@ -377,6 +383,7 @@ export const mainRoute = [
                   "PHMC ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 19,
                 optionName: "PSGP",
                 optionSize: "small",
                 optionIcon: "database",
@@ -384,6 +391,7 @@ export const mainRoute = [
                   "PSGP ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 20,
                 optionName: "SACC",
                 optionSize: "small",
                 optionIcon: "database",
@@ -391,6 +399,7 @@ export const mainRoute = [
                   "SACC ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 21,
                 optionName: "USBS",
                 optionSize: "small",
                 optionIcon: "database",
@@ -398,6 +407,7 @@ export const mainRoute = [
                   "USBS ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 22,
                 optionName: "WALG",
                 optionSize: "small",
                 optionIcon: "database",
@@ -405,6 +415,7 @@ export const mainRoute = [
                   "WALG ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 23,
                 optionName: "CSLS",
                 optionSize: "small",
                 optionIcon: "database",
@@ -412,6 +423,7 @@ export const mainRoute = [
                   "CSLS ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 24,
                 optionName: "CSTV",
                 optionSize: "small",
                 optionIcon: "database",
@@ -419,6 +431,7 @@ export const mainRoute = [
                   "CSTV ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 25,
                 optionName: "HLFW",
                 optionSize: "small",
                 optionIcon: "database",
@@ -426,6 +439,7 @@ export const mainRoute = [
                   "HLFW ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 26,
                 optionName: "ICSC",
                 optionSize: "small",
                 optionIcon: "database",
@@ -433,6 +447,7 @@ export const mainRoute = [
                   "ICSC ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 27,
                 optionName: "INST",
                 optionSize: "small",
                 optionIcon: "database",
@@ -440,6 +455,7 @@ export const mainRoute = [
                   "INST ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 28,
                 optionName: "LASH",
                 optionSize: "small",
                 optionIcon: "database",
@@ -447,6 +463,7 @@ export const mainRoute = [
                   "LASH ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 29,
                 optionName: "MTNG",
                 optionSize: "small",
                 optionIcon: "database",
@@ -454,6 +471,7 @@ export const mainRoute = [
                   "MTNG ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 30,
                 optionName: "MWIA",
                 optionSize: "small",
                 optionIcon: "database",
@@ -461,6 +479,7 @@ export const mainRoute = [
                   "MWIA ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 31,
                 optionName: "PFST",
                 optionSize: "small",
                 optionIcon: "database",
@@ -468,6 +487,7 @@ export const mainRoute = [
                   "PFST ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 32,
                 optionName: "PMSC",
                 optionSize: "small",
                 optionIcon: "database",
@@ -475,6 +495,7 @@ export const mainRoute = [
                   "PMSC ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 33,
                 optionName: "SCSG",
                 optionSize: "small",
                 optionIcon: "database",
@@ -482,6 +503,7 @@ export const mainRoute = [
                   "SCSG ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the relea"
               },
               {
+                optionNumber: 34,
                 optionName: "SFGP",
                 optionSize: "small",
                 optionIcon: "database",
@@ -496,6 +518,7 @@ export const mainRoute = [
               "Is the data full load or an incremental load(E.G. Daily, Monthly, ETC)  ?",
             optionSubStepOptions: [
               {
+                optionNumber: 1,
                 optionName: "Full Load",
                 optionSize: "medium",
                 optionIcon: "database",
@@ -503,6 +526,7 @@ export const mainRoute = [
                   "Full Load f the printing and typesetting industry. Lorem Ipsum h"
               },
               {
+                optionNumber: 2,
                 optionName: "Incremental",
                 optionSize: "medium",
                 optionIcon: "database",
@@ -517,12 +541,14 @@ export const mainRoute = [
               "Please select the file format for your data file ?",
             optionSubStepOptions: [
               {
+                optionNumber: 1,
                 optionName: "Orc Snappy File",
                 optionSize: "medium",
                 optionIcon: "database",
                 optionMetaData: "Format File - ORC - ,"
               },
               {
+                optionNumber: 2,
                 optionName: "Pipe Delimitted Text File",
                 optionSize: "medium",
                 optionIcon: "database",
