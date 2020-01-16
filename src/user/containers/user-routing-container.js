@@ -8,10 +8,10 @@ const UserRoutingContainer = props => {
     <>
       <Router>
         <UserDashboardContainer
-          path="/"
+          path="/home"
           user={props.user}
         ></UserDashboardContainer>
-        <PipelineContainer path="/pipeline"></PipelineContainer>
+        <PipelineContainer path="/"></PipelineContainer>
       </Router>
     </>
   );
