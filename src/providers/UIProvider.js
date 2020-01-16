@@ -4,7 +4,7 @@ export const UIContext = createContext({
   modalOpenClose: false,
   sideNavOpenClose: false,
   metaDataPanelOpenClose: false,
-  optionSubStepPanelOpenClose: false
+  rightStepOpenClose: false
 });
 
 class UIProvider extends Component {
@@ -12,7 +12,7 @@ class UIProvider extends Component {
     modalOpenClose: false,
     sideNavOpenClose: false,
     metaDataPanelOpenClose: false,
-    optionSubStepPanelOpenClose: false
+    rightStepOpenClose: true
   };
 
   componentDidMount() {
@@ -28,7 +28,7 @@ class UIProvider extends Component {
       modalOpenClose,
       sideNavOpenClose,
       metaDataPanelOpenClose,
-      optionSubStepPanelOpenClose
+      rightStepOpenClose
     } = this.state;
     const { children } = this.props;
 
@@ -38,7 +38,7 @@ class UIProvider extends Component {
           modalOpenClose,
           sideNavOpenClose,
           metaDataPanelOpenClose,
-          optionSubStepPanelOpenClose,
+          rightStepOpenClose,
           toggleUIComponent: this.toggleUIComponent
         }}
       >
