@@ -43,7 +43,7 @@ class DataProvider extends Component {
   getOptionSubStep = (stepNumber, optionNumber, optionSubStepNumber) => {
     return this.getStepOption(stepNumber, optionNumber)
       .optionSubSteps.filter(optionSubStep => {
-        if (optionSubStep.optionSubStepNumber === optionSubStepNumber) {
+        if (optionSubStep.optionNumber === optionSubStepNumber) {
           return optionSubStep;
         }
       })
@@ -70,10 +70,14 @@ class DataProvider extends Component {
       currentStepOption: this.getStepOption(number, optNumber)
     });
 
+    console.log(this.getStepOption(number, optNumber));
+
     // when we change STEP OPTION WE ALWAYS SET SUBSTEP TO FIRST
     this.setState({
       currentOptionSubStep: this.getOptionSubStep(number, optNumber, 1)
     });
+
+    console.log(this.getOptionSubStep(number, optNumber, 1));
   };
 
   updateCurrentOptionSubStep = () => {

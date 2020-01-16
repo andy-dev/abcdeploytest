@@ -24,7 +24,7 @@ const SubStep = props => {
 
   return (
     <>
-      {currentOptionSubStep.optionSubStepQuestion !== null && (
+      {currentOptionSubStep.optionQuestion !== null && (
         <>
           <h3
             css={css`
@@ -32,7 +32,7 @@ const SubStep = props => {
               padding-bottom: 10px;
             `}
           >
-            {currentOptionSubStep.optionSubStepQuestion}
+            {currentOptionSubStep.optionQuestion}
           </h3>
           <div
             css={css`

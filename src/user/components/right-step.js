@@ -31,6 +31,7 @@ const RightStep = props => {
       updateCurrentStepOptionNumber(props.optionNumber);
       updateCurrentStepOption(props.stepNumber, props.optionNumber);
 
+      console.log(props.stepNumber, props.optionNumber);
       // open right step
       if (rightStepOpenClose === false) {
         toggleUIComponent("rightStepOpenClose");
@@ -106,21 +107,21 @@ const RightStep = props => {
 
           <div>
             {/* file chooser */}
-            {currentOptionSubStep.optionSubStepQuestion === "fileChooser" && (
+            {currentOptionSubStep.optionQuestion === "fileChooser" && (
               <FileUpload
                 buttonLabel="Choose File"
                 goToNextOptionSubStep={goToNextOptionSubStep}
               ></FileUpload>
             )}
             {/* list schemas */}
-            {currentOptionSubStep.optionSubStepQuestion === "listSchemas" && (
+            {currentOptionSubStep.optionQuestion === "listSchemas" && (
               <ListSchemas
                 goToNextOptionSubStep={goToNextOptionSubStep}
               ></ListSchemas>
             )}
             {/* normal question */}
-            {currentOptionSubStep.optionSubStepQuestion !== "listSchemas" &&
-              currentOptionSubStep.optionSubStepQuestion !== "fileChooser" && (
+            {currentOptionSubStep.optionQuestion !== "listSchemas" &&
+              currentOptionSubStep.optionQuestion !== "fileChooser" && (
                 <SubStep></SubStep>
               )}
 

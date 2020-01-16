@@ -39,7 +39,7 @@ const StepContainer = () => {
         css={css`
           flex: ${rightStepOpenClose ? 5 : 0};
           display: ${rightStepOpenClose ? "initial" : "none"};
-          background-color: #00746d;
+          /* background-color: #00746d; */
         `}
       >
         <RightSideStep></RightSideStep>
