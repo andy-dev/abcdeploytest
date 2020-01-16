@@ -1,13 +1,19 @@
 import React, { useContext, useState, useEffect } from "react";
 import { css } from "@emotion/core";
 import { UIContext } from "../../providers/UIProvider.js";
-import { DataContext } from "../../providers/DataProvider";
+import { DataContext } from "../../providers/DataProvider.js";
+import FileUpload from "./file-upload.js";
 import { navigate } from "@reach/router";
+import ListSchemas from "./list-schemas.js";
 
 const RightStep = props => {
-  const { currentStepOption, updatecurrentStepOption } = useContext(UIContext);
+  const { currentOptionSubStep, updateCurrentStepOption } = useContext(
+    DataContext
+  );
 
-  const { currentStepOptionNumber, updateCurrentStepOptionNumber } = useState(
+  console.log(currentOptionSubStep);
+
+  const [currentStepOptionNumber, updateCurrentStepOptionNumber] = useState(
     "1"
   );
 
@@ -15,7 +21,7 @@ const RightStep = props => {
     if (props.optionNumber !== currentStepOptionNumber) {
       updateCurrentStepOptionNumber(props.optionNumber);
 
-      updateCurrentStep(props.optionNumber);
+      updateCurrentStepOption(props.stepNumber, props.optionNumber);
     }
   });
 
@@ -57,10 +63,21 @@ const RightStep = props => {
         </button>
       </div>
       <div>
-        <h1>STEP</h1>
-        <pre>
+        {/* file chooser */}
+        {currentOptionSubStep.optionSubStepQuestion === "fileChooser" && (
+          <FileUpload buttonLabel="Choose File"></FileUpload>
+        )}
+        {/* list schemas */}
+        {currentOptionSubStep.optionSubStepQuestion === "listSchemas" && (
+          <>
+            <p>list schmeas</p>
+            <ListSchemas></ListSchemas>
+          </>
+        )}
+
+        {/* <pre>
           <code>{JSON.stringify(props, null, 4)}</code>
-        </pre>
+        </pre> */}
       </div>
     </div>
   );

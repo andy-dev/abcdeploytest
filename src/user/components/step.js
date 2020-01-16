@@ -8,7 +8,6 @@ import { navigate } from "@reach/router";
 const Step = props => {
   // get step and updateFn from store
   const { currentStep, updateCurrentStep } = useContext(DataContext);
-  console.log(currentStep);
 
   // keep track to see if step # changed in url
   const [currentStepNumber, updateCurrentStepNumber] = useState("1");
