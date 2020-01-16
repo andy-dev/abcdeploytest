@@ -3,6 +3,7 @@ import { css } from "@emotion/core";
 
 import { DataContext } from "../../providers/DataProvider";
 import OptionCard from "./option-card";
+import { navigate } from "@reach/router";
 
 const Step = props => {
   // get step and updateFn from store
@@ -23,6 +24,12 @@ const Step = props => {
 
   const getRandomColor = () => {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  };
+
+  const selectOption = optionNumber => {
+    navigate(
+      `/step/${currentStepNumber}/stepOption/${optionNumber}/optionSubStep/1`
+    );
   };
 
   return (
@@ -52,22 +59,8 @@ const Step = props => {
               key={i}
               opt={opt}
               bgColor={getRandomColor()}
+              selectOption={selectOption}
             ></OptionCard>
-            // <OptionCard
-            //   key={i}
-            // option={opt}
-            // size={this.state.size}
-            // icon={this.state.icon}
-            // color={this.getRandomColor()}
-            // stepNumber={this.props.stepNumber}
-            // subStepNumber={this.state.currentSubStep}
-            // getOptionSubStep={this.getOptionSubStep}
-            // droppableTargets={this.state.droppableTargets}
-            // toggleOptionSubStep={this.toggleOptionSubStep}
-            // grabMetaFromOption={this.props.grabMetaFromOption}
-            // grabOptionSubStepFromOption={this.props.grabOptionSubStepFromOption}
-            // getNextSubStepOrNextStep={this.getNextSubStepOrNextStep}
-            // ></OptionCard>
           );
         })}
       </div>

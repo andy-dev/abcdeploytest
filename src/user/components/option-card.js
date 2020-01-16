@@ -12,6 +12,10 @@ class OptionCard extends Component {
 
   componentDidMount() {}
 
+  selectOption() {
+    this.props.selectOption(this.props.opt.optionNumber);
+  }
+
   render() {
     return (
       <>
@@ -34,6 +38,7 @@ class OptionCard extends Component {
               cursor: pointer;
             }
           `}
+          onClick={() => this.selectOption(this.props.opt.optionNumber)}
         >
           <div
             className="pipeline-card-header"

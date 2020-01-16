@@ -1,9 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { css } from "@emotion/core";
 import { UIContext } from "../../providers/UIProvider.js";
+import { DataContext } from "../../providers/DataProvider";
+import { navigate } from "@reach/router";
 
 const RightStep = props => {
-  const { toggleUIComponent } = useContext(UIContext);
+  const { currentStepOption, updatecurrentStepOption } = useContext(UIContext);
+
+  const { currentStepOptionNumber, updateCurrentStepOptionNumber } = useState(
+    "1"
+  );
+
+  useEffect(() => {
+    if (props.optionNumber !== currentStepOptionNumber) {
+      updateCurrentStepOptionNumber(props.optionNumber);
+
+      updateCurrentStep(props.optionNumber);
+    }
+  });
 
   const closeRightSideStep = () => {
     toggleUIComponent("rightStepOpenClose");

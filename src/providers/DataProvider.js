@@ -4,13 +4,15 @@ import { mainRoute } from "../../data-interface.js";
 
 export const DataContext = createContext({
   currentStep: null,
-  currentSubStep: null
+  currentSubStep: null,
+  currentStepOption: null
 });
 
 class DataProvider extends Component {
   state = {
     currentStep: null,
-    currentSubStep: null
+    currentSubStep: null,
+    currentStepOption: null
   };
 
   componentDidMount() {
@@ -63,7 +65,7 @@ class DataProvider extends Component {
   };
 
   render() {
-    const { currentStep, currentSubStep } = this.state;
+    const { currentStep, currentSubStep, currentStepOption } = this.state;
     const { children } = this.props;
 
     return (
@@ -71,6 +73,7 @@ class DataProvider extends Component {
         value={{
           currentStep,
           currentSubStep,
+          currentStepOption,
           updateCurrentStep: this.updateCurrentStep
         }}
       >
