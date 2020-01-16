@@ -5,6 +5,7 @@ import { DataContext } from "../../providers/DataProvider.js";
 import FileUpload from "./file-upload.js";
 import { navigate } from "@reach/router";
 import ListSchemas from "./list-schemas.js";
+import SubStep from "./sub-step.js";
 
 const RightStep = props => {
   const {
@@ -18,6 +19,8 @@ const RightStep = props => {
   const [currentStepOptionNumber, updateCurrentStepOptionNumber] = useState(
     null
   );
+
+  console.log(currentOptionSubStep);
 
   useEffect(() => {
     // url has optionNumber then get option
@@ -40,6 +43,7 @@ const RightStep = props => {
         // close
         toggleUIComponent("rightStepOpenClose");
       }
+      console.log("clearing");
       clearOptionSubStep();
     }
   });
@@ -110,12 +114,15 @@ const RightStep = props => {
             )}
             {/* list schemas */}
             {currentOptionSubStep.optionSubStepQuestion === "listSchemas" && (
-              <>
-                <ListSchemas
-                  goToNextOptionSubStep={goToNextOptionSubStep}
-                ></ListSchemas>
-              </>
+              <ListSchemas
+                goToNextOptionSubStep={goToNextOptionSubStep}
+              ></ListSchemas>
             )}
+            {/* normal question */}
+            {currentOptionSubStep.optionSubStepQuestion !== "listSchemas" &&
+              currentOptionSubStep.optionSubStepQuestion !== "fileChooser" && (
+                <SubStep></SubStep>
+              )}
 
             {/* <pre>
              <code>{JSON.stringify(props, null, 4)}</code>

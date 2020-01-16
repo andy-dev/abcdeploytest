@@ -16,8 +16,17 @@ const Step = props => {
   useEffect(() => {
     if (props.stepNumber !== currentStepNumber) {
       updateCurrentStepNumber(props.stepNumber);
-
       updateCurrentStep(props.stepNumber);
+    }
+
+    if (currentStep.stepQuestion === null) {
+      // go to options
+
+      if (props.location.href.includes("stepOption")) {
+        return;
+      }
+
+      selectOption(1);
     }
   });
 
@@ -33,41 +42,50 @@ const Step = props => {
 
   return (
     <>
-      <h3
-        css={css`
-          width: 100%;
-          padding-bottom: 10px;
-        `}
-      >
-        {currentStep.stepQuestion}
-      </h3>
-      <div
-        css={css`
-          display: flex;
-          padding-top: 15px;
-          flex-wrap: wrap;
-          @media (max-width: 500px) {
-            justify-content: center;
-            text-align: center;
-          }
-        `}
-      >
-        {currentStep.stepOptions.map((opt, i) => {
-          return (
-            <OptionCard
-              key={i}
-              opt={opt}
-              bgColor={getRandomColor()}
-              selectOption={selectOption}
-            ></OptionCard>
-          );
-        })}
-      </div>
-      {/* <pre>
-        <code>{JSON.stringify(props, null, 4)}</code>
-      </pre> */}
+      {currentStep.stepQuestion === null && <p>just render user selections</p>}
+
+      {currentStep.stepQuestion !== null && (
+        <>
+          <h3
+            css={css`
+              width: 100%;
+              padding-bottom: 10px;
+            `}
+          >
+            {currentStep.stepQuestion}
+          </h3>
+          <div
+            css={css`
+              display: flex;
+              padding-top: 15px;
+              flex-wrap: wrap;
+              @media (max-width: 500px) {
+                justify-content: center;
+                text-align: center;
+              }
+            `}
+          >
+            {currentStep.stepOptions.map((opt, i) => {
+              return (
+                <OptionCard
+                  key={i}
+                  opt={opt}
+                  bgColor={getRandomColor()}
+                  selectOption={selectOption}
+                ></OptionCard>
+              );
+            })}
+          </div>
+        </>
+      )}
     </>
   );
 };
 
 export default Step;
+
+{
+  /* <pre>
+  <code>{JSON.stringify(props, null, 4)}</code>
+</pre> */
+}

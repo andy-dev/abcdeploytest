@@ -18,12 +18,6 @@ class DataProvider extends Component {
   componentDidMount() {
     // get first step
     this.setState({ currentStep: this.getStepByStepNumber(1) });
-
-    // set initial option to be first option of step 1
-    // this.setState({ currentStepOption: this.getStepOption(1, 1) });
-
-    // set initial subStep to first option of stepOptions
-    // this.setState({ currentOptionSubStep: this.getOptionSubStep(1, 1, 1) });
   }
 
   getStepByStepNumber = stepNumber => {
@@ -61,7 +55,6 @@ class DataProvider extends Component {
   };
 
   updateCurrentStep = stepNumber => {
-    console.log("warning updating current step");
     let number = parseInt(stepNumber, 10);
     this.setState({
       currentStep: this.getStepByStepNumber(number)
@@ -69,7 +62,6 @@ class DataProvider extends Component {
   };
 
   updateCurrentStepOption = (stepNumber, optionNumber) => {
-    console.log("warning updating current option");
     let number = parseInt(stepNumber, 10);
     let optNumber = parseInt(optionNumber, 10);
 
@@ -82,6 +74,10 @@ class DataProvider extends Component {
     this.setState({
       currentOptionSubStep: this.getOptionSubStep(number, optNumber, 1)
     });
+  };
+
+  updateCurrentOptionSubStep = () => {
+    console.log("go to next substep or next step");
   };
 
   clearOptionSubStep = () => {
@@ -99,8 +95,9 @@ class DataProvider extends Component {
           currentStepOption,
           currentOptionSubStep,
           updateCurrentStep: this.updateCurrentStep,
+          clearOptionSubStep: this.clearOptionSubStep,
           updateCurrentStepOption: this.updateCurrentStepOption,
-          clearOptionSubStep: this.clearOptionSubStep
+          updateCurrentOptionSubStep: this.updateCurrentOptionSubStep
         }}
       >
         {children}

@@ -213,8 +213,6 @@ export const mainRoute = [
     stepOptions: [
       {
         optionNumber: 1,
-        optionSize: "medium",
-        optionIcon: "database",
         optionName: null,
         optionMetaData: null,
         optionSubSteps: [
