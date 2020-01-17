@@ -75,6 +75,10 @@ const RightStep = props => {
     updateValue("sourceFile", val);
   };
 
+  const addTargetFileToUserSelections = val => {
+    updateValue("targetFile", val);
+  };
+
   const goToNextOptionSubStep = () => {
     let numberOfOptionSubSteps = currentStepOption.optionSubSteps.length;
     let currentOptionSubStepNumber = currentOptionSubStep.optionNumber;
@@ -151,6 +155,7 @@ const RightStep = props => {
               >
                 <ListSchemas
                   goToNextOptionSubStep={goToNextOptionSubStep}
+                  addTargetFileToUserSelections={addTargetFileToUserSelections}
                 ></ListSchemas>
               </div>
             )}

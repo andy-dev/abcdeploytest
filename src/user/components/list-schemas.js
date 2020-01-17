@@ -63,6 +63,7 @@ class ListSchemas extends Component {
 
   chooseSchema = selection => {
     this.setState({ schemaSelected: selection });
+    this.props.addTargetFileToUserSelections(selection);
   };
 
   render() {

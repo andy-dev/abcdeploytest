@@ -64,7 +64,7 @@ class SingleSelect extends Component {
         <Downshift
           onChange={selection =>
             selection
-              ? customHandler(`You selected ${itemToString(selection)}`)
+              ? customHandler(`${itemToString(selection)}`)
               : customHandler("selection cleared")
           }
           itemToString={itemToString}
