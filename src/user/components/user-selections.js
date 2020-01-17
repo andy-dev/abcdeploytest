@@ -315,56 +315,120 @@ const UserSelections = () => {
               padding: 5px;
             `}
           >
-            Source: {source}
+            Source:{" "}
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {source}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            SourceFile: {sourceFile}
+            SourceFile:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {sourceFile}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            Target: {target}
+            Target:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {target}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            TargetFile: {targetFile}
+            TargetFile:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {targetFile}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            Company: {company}
+            Company:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {company}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            Division: {division}
+            Division:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {division}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            DataFullLoad | Incremental: {dataFullLoadOrIncremental}
+            DataFullLoad | Incremental:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {dataFullLoadOrIncremental}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            FileFormat: {fileFormat}
+            FileFormat:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {fileFormat}
+            </span>
           </p>
           <div
             css={css`
@@ -398,56 +462,120 @@ const UserSelections = () => {
               padding: 5px;
             `}
           >
-            Source: {source}
+            Source:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {source}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            SourceFile: {sourceFile}
+            SourceFile:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {sourceFile}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            Target: {target}
+            Target:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {target}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            TargetFile: {targetFile}
+            TargetFile:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {targetFile}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            Company: {company}
+            Company:{" "}
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {company}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            Division: {division}
+            Division:{" "}
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {division}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            DataFullLoad | Incremental: {dataFullLoadOrIncremental}
+            DataFullLoad | Incremental:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {dataFullLoadOrIncremental}
+            </span>
           </p>
           <p
             css={css`
               padding: 5px;
             `}
           >
-            FileFormat: {fileFormat}
+            FileFormat:
+            <span
+              css={css`
+                color: blue;
+                font-weight: bold;
+              `}
+            >
+              {fileFormat}
+            </span>
           </p>
         </div>
       )}
