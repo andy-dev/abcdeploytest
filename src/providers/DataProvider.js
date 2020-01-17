@@ -70,8 +70,6 @@ class DataProvider extends Component {
       currentStepOption: this.getStepOption(number, optNumber)
     });
 
-    console.log(this.getStepOption(number, optNumber));
-
     // when we change STEP OPTION WE ALWAYS SET SUBSTEP TO FIRST
     this.setState({
       currentOptionSubStep: this.getOptionSubStep(number, optNumber, 1)

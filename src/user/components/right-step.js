@@ -26,11 +26,9 @@ const RightStep = props => {
     updateCurrentOptionSubStepNumber
   ] = useState(null);
 
-  console.log(currentOptionSubStep);
-
   useEffect(() => {
     // url has optionNumber then get option
-    console.log(props);
+
     if (
       props.optionNumber !== undefined &&
       props.optionNumber !== currentStepOptionNumber
@@ -38,24 +36,23 @@ const RightStep = props => {
       updateCurrentStepOptionNumber(props.optionNumber);
       updateCurrentStepOption(props.stepNumber, props.optionNumber);
 
-      // url has changed optionSubStep
-      if (
-        props.optionSubStepNumber !== undefined &&
-        props.optionSubStepNumber !== currentOptionSubStepNumber
-      ) {
-        console.log("geeeeee");
-        updateCurrentOptionSubStepNumber(props.optionSubStepNumber);
-        updateCurrentOptionSubStep(
-          props.stepNumber,
-          props.optionNumber,
-          props.optionSubStepNumber
-        );
-      }
-
       // open right step
       if (rightStepOpenClose === false) {
         toggleUIComponent("rightStepOpenClose");
       }
+    }
+
+    // optionSubStep url changed
+    if (
+      props.optionSubStepNumber !== undefined &&
+      props.optionSubStepNumber !== currentOptionSubStepNumber
+    ) {
+      updateCurrentOptionSubStepNumber(props.optionSubStepNumber);
+      updateCurrentOptionSubStep(
+        props.stepNumber,
+        props.optionNumber,
+        props.optionSubStepNumber
+      );
     }
 
     // user goes back or url changes and route no longer has optionNumber
@@ -73,13 +70,13 @@ const RightStep = props => {
   };
 
   const goToNextOptionSubStep = () => {
-    // let numberOfOptionSubSteps = currentStepOption.optionSubSteps.length;
-    // let currentOptionSubStepNumber = currentOptionSubStep.optionSubStepNumber;
-    // if (numberOfOptionSubSteps > currentOptionSubStepNumber) {
-    //   navigate(`${currentOptionSubStepNumber + 1}`);
-    // } else {
-    //   goToNextStep();
-    // }
+    let numberOfOptionSubSteps = currentStepOption.optionSubSteps.length;
+    let currentOptionSubStepNumber = currentOptionSubStep.optionNumber;
+    if (numberOfOptionSubSteps > currentOptionSubStepNumber) {
+      navigate(`${currentOptionSubStepNumber + 1}`);
+    } else {
+      goToNextStep();
+    }
   };
 
   const goToNextStep = () => {
