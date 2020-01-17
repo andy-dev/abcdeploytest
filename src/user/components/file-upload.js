@@ -16,6 +16,7 @@ class FileUpload extends Component {
 
   handleInputChange = e => {
     let inputName = e.target.value.replace(/.*[\/\\]/, "");
+    this.props.addFileToUserSelections(inputName);
     this.setState({ fileValue: inputName });
   };
 

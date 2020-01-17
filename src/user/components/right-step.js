@@ -6,8 +6,10 @@ import FileUpload from "./file-upload.js";
 import { navigate } from "@reach/router";
 import ListSchemas from "./list-schemas.js";
 import SubStep from "./sub-step.js";
+import { UserContext } from "../../providers/UserProvider.js";
 
 const RightStep = props => {
+  const { updateValue } = useContext(UserContext);
   const {
     currentStepOption,
     currentOptionSubStep,
@@ -67,6 +69,10 @@ const RightStep = props => {
 
   const closeRightSideStep = () => {
     toggleUIComponent("rightStepOpenClose");
+  };
+
+  const addFileToUserSelections = val => {
+    updateValue("sourceFile", val);
   };
 
   const goToNextOptionSubStep = () => {
@@ -132,6 +138,7 @@ const RightStep = props => {
                 <FileUpload
                   buttonLabel="Choose File"
                   goToNextOptionSubStep={goToNextOptionSubStep}
+                  addFileToUserSelections={addFileToUserSelections}
                 ></FileUpload>
               </div>
             )}
