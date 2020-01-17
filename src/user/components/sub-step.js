@@ -30,6 +30,7 @@ const SubStep = props => {
             css={css`
               width: 100%;
               padding-bottom: 10px;
+              color: white;
             `}
           >
             {currentOptionSubStep.optionQuestion}
@@ -50,6 +51,8 @@ const SubStep = props => {
                 <OptionCard
                   key={i}
                   opt={opt}
+                  cardColor="#00539b"
+                  bc="black"
                   bgColor={getRandomColor()}
                   selectOption={selectSubStepOption}
                 ></OptionCard>

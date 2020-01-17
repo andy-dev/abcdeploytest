@@ -24,7 +24,9 @@ class OptionCard extends Component {
           css={css`
             margin-right: 10px;
             margin-bottom: 10px;
+            background-color: ${this.props.cardColor};
             border-bottom: 4px solid #00539b;
+            border: ${this.props.bc === "black" ? "1px solid black" : ""};
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
               0 3px 6px rgba(0, 0, 0, 0.23);
 
@@ -52,7 +54,13 @@ class OptionCard extends Component {
                 : "15px"};
             `}
           >
-            <h5 className="fw-300">{this.props.opt.optionName}</h5>
+            <h5
+              css={css`
+                color: ${this.props.bc === "black" ? "white" : ""};
+              `}
+            >
+              {this.props.opt.optionName}
+            </h5>
           </div>
           <div
             className="option-card-icon"
@@ -101,9 +109,11 @@ class OptionCard extends Component {
             <p
               css={css`
                 margin-left: -5px;
+                color: ${this.props.bc === "black" ? "white" : ""};
                 :hover {
                   cursor: pointer;
-                  color: #00539b;
+                  color: ${this.props.bc === "black" ? "white" : "#00539b"};
+
                   font-weight: bold;
                 }
               `}
