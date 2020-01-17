@@ -10,10 +10,44 @@ class OptionCard extends Component {
   state = {};
   myElement = null;
 
-  componentDidMount() {}
+  getDroppableTargets = () => {
+    return document.querySelectorAll(".droppable");
+  };
+
+  componentDidMount() {
+    gsap.registerPlugin(Draggable);
+    var droppables = this.getDroppableTargets();
+    var myTween = new TimelineLite({ paused: true });
+    Draggable.create(".option-card", {
+      type: "x,y",
+      onPress: function() {
+        console.log("clicked");
+      },
+      onDrag: function(e) {
+        var i = droppables.length;
+        while (--i > -1) {
+          if (this.hitTest(droppables[i], "50%")) {
+            // on drop click card
+            // this.target.click();
+
+            droppables[i].classList.add("highlight");
+          } else {
+            console.log("remove class");
+            droppables[i].classList.remove("highlight");
+          }
+        }
+      },
+      onDragEnd: function(e) {
+        console.log("move back");
+        var x = 0;
+        var y = 0;
+        myTween.to(this.target, 0.3, { x: x, y: y }).play();
+      }
+    });
+  }
 
   selectOption() {
-    this.props.selectOption(this.props.opt.optionNumber);
+    this.props.selectOption(this.props.opt.optionNumber, this.props.opt);
   }
 
   render() {

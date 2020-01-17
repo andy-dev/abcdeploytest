@@ -4,7 +4,15 @@ export const UserContext = createContext({ user: null });
 
 class UserProvider extends Component {
   state = {
-    user: null
+    user: null,
+    source: null,
+    sourceFile: null,
+    target: null,
+    targetFile: null,
+    company: null,
+    division: null,
+    dataFullLoadOrIncremental: null,
+    fileFormat: null
   };
 
   componentDidMount() {
@@ -19,13 +27,32 @@ class UserProvider extends Component {
   };
 
   render() {
-    const { user } = this.state;
+    const {
+      user,
+      source,
+      sourceFile,
+      target,
+      targetFile,
+      company,
+      division,
+      dataFullLoadOrIncremental,
+      fileFormat
+    } = this.state;
     const { children } = this.props;
 
     return (
       <UserContext.Provider
         value={{
-          user: user,
+          user,
+          user,
+          source,
+          sourceFile,
+          target,
+          targetFile,
+          company,
+          division,
+          dataFullLoadOrIncremental,
+          fileFormat,
           updateValue: this.updateValue
         }}
       >

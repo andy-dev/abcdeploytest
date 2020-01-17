@@ -1,13 +1,20 @@
 import React, { useContext, useEffect, useState } from "react";
 import { css } from "@emotion/core";
 
-import { DataContext } from "../../providers/DataProvider";
+import { DataContext } from "../../providers/DataProvider.js";
+import { UserContext } from "../../providers/UserProvider.js";
 import OptionCard from "./option-card";
 import { navigate } from "@reach/router";
 
 const Step = props => {
   // get step and updateFn from store
-  const { currentStep, updateCurrentStep } = useContext(DataContext);
+  const {
+    currentStep,
+    currentStepOption,
+    currentOptionSubStep,
+    updateCurrentStep
+  } = useContext(DataContext);
+  const { updateValue } = useContext(UserContext);
 
   // keep track to see if step # changed in url
   const [currentStepNumber, updateCurrentStepNumber] = useState("1");
@@ -25,7 +32,6 @@ const Step = props => {
       if (props.location.href.includes("stepOption")) {
         return;
       }
-
       selectOption(1);
     }
   });
@@ -34,10 +40,28 @@ const Step = props => {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   };
 
-  const selectOption = optionNumber => {
+  const selectOption = (optionNumber, option) => {
+    console.log(currentStep, currentStepOption, currentOptionSubStep, option);
+    if (
+      currentStep.stepNumber === 1 &&
+      currentStepOption === null &&
+      currentOptionSubStep === null
+    ) {
+      updateValue("source", option.optionName);
+    }
+
+    if (currentStep.stepQuestion === "Select Target") {
+      updateValue("target", option.optionName);
+    }
+
     navigate(
       `/step/${currentStepNumber}/stepOption/${optionNumber}/optionSubStep/1`
     );
+  };
+
+  const getFileKeyGivenOptionName = optName => {
+    if (optName === "File Source") {
+    }
   };
 
   return (

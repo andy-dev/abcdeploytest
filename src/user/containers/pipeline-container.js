@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import TopHat from "../../common/top-hat.js";
 import SideNav from "../../common/side-nav.js";
 import { UIContext } from "../../providers/UIProvider.js";
+import { UserContext } from "../../providers/UserProvider.js";
 import StepContainer from "./step-container.js";
 import { navigate } from "@reach/router";
 import PipelineHeader from "../../common/pipeline-header.js";
@@ -12,6 +13,7 @@ import LeftToRightArrow from "../../common/left-to-right-arrow.js";
 
 const PipelineContainer = () => {
   const { sideNavOpenClose, toggleUIComponent } = useContext(UIContext);
+  const { source, target } = useContext(UserContext);
 
   return (
     <>
@@ -30,19 +32,40 @@ const PipelineContainer = () => {
           padding: 15px;
         `}
       >
-        <SourceAndTargetCard
-          background="#f6f6f6"
-          color="#86868b"
-          text="Source"
-        ></SourceAndTargetCard>
-        <LeftToRightArrow></LeftToRightArrow>
-        <SourceAndTargetCard
-          background="#f6f6f6"
-          color="#86868b"
-          text="Source"
-        ></SourceAndTargetCard>
-      </div>
+        {source == null && (
+          <SourceAndTargetCard
+            background="#f6f6f6"
+            color="#86868b"
+            text="Source"
+          ></SourceAndTargetCard>
+        )}
 
+        {source !== null && (
+          <SourceAndTargetCard
+            background="#00539B"
+            color="white"
+            text={`${source}`}
+          ></SourceAndTargetCard>
+        )}
+
+        <LeftToRightArrow></LeftToRightArrow>
+
+        {target === null && (
+          <SourceAndTargetCard
+            background="#f6f6f6"
+            color="#86868b"
+            text="Target"
+          ></SourceAndTargetCard>
+        )}
+
+        {target !== null && (
+          <SourceAndTargetCard
+            background="#820053"
+            color="white"
+            text={`${target}`}
+          ></SourceAndTargetCard>
+        )}
+      </div>
       <StepContainer></StepContainer>
     </>
   );
