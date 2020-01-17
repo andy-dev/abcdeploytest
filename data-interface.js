@@ -549,7 +549,7 @@ export const mainRoute = [
               },
               {
                 optionNumber: 2,
-                optionName: "Pipe Delimitted Text File",
+                optionName: "Pipe Delimitted",
                 optionSize: "medium",
                 optionIcon: "database",
                 optionMetaData: "Pipe Delimitted Text File"

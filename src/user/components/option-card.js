@@ -28,7 +28,7 @@ class OptionCard extends Component {
         while (--i > -1) {
           if (this.hitTest(droppables[i], "50%")) {
             // on drop click card
-            // this.target.click();
+            this.target.click();
 
             droppables[i].classList.add("highlight");
           } else {

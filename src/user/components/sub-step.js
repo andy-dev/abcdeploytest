@@ -5,11 +5,14 @@ import { DataContext } from "../../providers/DataProvider.js";
 import { UserContext } from "../../providers/UserProvider.js";
 import OptionCard from "./option-card";
 import { navigate } from "@reach/router";
+import { UIContext } from "../../providers/UIProvider.js";
 
 const SubStep = props => {
   const { currentOptionSubStep, updateCurrentOptionSubStep } = useContext(
     DataContext
   );
+
+  const { toggleUIComponent } = useContext(UIContext);
 
   const {
     company,
@@ -45,8 +48,9 @@ const SubStep = props => {
     }
     if (fileFormat === null) {
       updateValue("fileFormat", opt.optionName);
-      console.log("heeere");
-      navigate(`/step`);
+      updateValue("filled", true);
+      toggleUIComponent("rightStepOpenClose");
+
       return;
     }
 
@@ -83,7 +87,7 @@ const SubStep = props => {
                 <OptionCard
                   key={i}
                   opt={opt}
-                  cardColor="#00539b"
+                  cardColor="#044985"
                   bc="black"
                   bgColor={getRandomColor()}
                   selectOption={selectSubStepOption}
