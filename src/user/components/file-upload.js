@@ -32,6 +32,7 @@ class FileUpload extends Component {
           css={css`
             padding: 10px;
             font-size: 15px;
+            color: white;
           `}
         >
           {this.state.fileValue}

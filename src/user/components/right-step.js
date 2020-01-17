@@ -123,16 +123,29 @@ const RightStep = props => {
           <div>
             {/* file chooser */}
             {currentOptionSubStep.optionQuestion === "fileChooser" && (
-              <FileUpload
-                buttonLabel="Choose File"
-                goToNextOptionSubStep={goToNextOptionSubStep}
-              ></FileUpload>
+              <div
+                css={css`
+                  margin: 10px auto;
+                  text-align: center;
+                `}
+              >
+                <FileUpload
+                  buttonLabel="Choose File"
+                  goToNextOptionSubStep={goToNextOptionSubStep}
+                ></FileUpload>
+              </div>
             )}
             {/* list schemas */}
             {currentOptionSubStep.optionQuestion === "listSchemas" && (
-              <ListSchemas
-                goToNextOptionSubStep={goToNextOptionSubStep}
-              ></ListSchemas>
+              <div
+                css={css`
+                  margin: 10px auto;
+                `}
+              >
+                <ListSchemas
+                  goToNextOptionSubStep={goToNextOptionSubStep}
+                ></ListSchemas>
+              </div>
             )}
             {/* normal question */}
             {currentOptionSubStep.optionQuestion !== "listSchemas" &&

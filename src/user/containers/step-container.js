@@ -14,6 +14,7 @@ const StepContainer = () => {
         height: 100%;
         min-height: 80vh;
         background-color: white;
+        padding: 15px;
       `}
     >
       {/* ---------------------------------------------
@@ -24,7 +25,6 @@ const StepContainer = () => {
         className="box-left"
         css={css`
           flex: ${rightStepOpenClose ? 5 : 1};
-          outline: 1px solid red;
         `}
       >
         <LeftSideStep></LeftSideStep>
@@ -40,6 +40,8 @@ const StepContainer = () => {
           flex: ${rightStepOpenClose ? 5 : 0};
           display: ${rightStepOpenClose ? "initial" : "none"};
           /* background-color: #00746d; */
+          padding: 15px;
+          background-color: #00539b;
         `}
       >
         <RightSideStep></RightSideStep>

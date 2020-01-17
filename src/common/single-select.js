@@ -27,11 +27,10 @@ const Container = props => (
     css={css`
       display: flex;
       flex-direction: column;
-      /* margin-top: 40px; */
-      .input-container {
-        width: 30%;
+      align-items: center;
 
-        margin: "auto";
+      .input-container {
+        width: 50%;
       }
       .set-positon-relative {
         position: relative;
@@ -55,20 +54,13 @@ class SingleSelect extends Component {
     label: this.props.label,
     items: this.props.items,
     placeholder: this.props.placeholder,
-    customWidth: this.props.customWidth,
     customHandler: this.props.customHandler
   };
 
   render() {
-    const {
-      items,
-      label,
-      placeholder,
-      customWidth,
-      customHandler
-    } = this.state;
+    const { items, label, placeholder, customHandler } = this.state;
     return (
-      <Container customWidth={customWidth}>
+      <Container>
         <Downshift
           onChange={selection =>
             selection

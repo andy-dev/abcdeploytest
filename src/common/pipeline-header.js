@@ -3,10 +3,6 @@ import { css } from "@emotion/core";
 import AbcButton from "./abc-button";
 
 class PipelineHeader extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   OnButtonClick = () => {
     this.props.btnCb();
   };
@@ -18,7 +14,7 @@ class PipelineHeader extends Component {
         css={css`
           display: flex;
           flex-grow: 1;
-          padding: 10px;
+          padding: 15px;
           background-color: white;
           @media (max-width: 320px) {
             flex-wrap: wrap;
@@ -52,10 +48,12 @@ class PipelineHeader extends Component {
             }
           `}
         >
-          <AbcButton
-            OnButtonClickCB={this.OnButtonClick}
-            buttonLabel={this.props.btnLabel}
-          ></AbcButton>
+          {!this.props.hide && (
+            <AbcButton
+              OnButtonClickCB={this.OnButtonClick}
+              buttonLabel={this.props.btnLabel}
+            ></AbcButton>
+          )}
         </div>
       </div>
     );

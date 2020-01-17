@@ -77,8 +77,9 @@ class ListSchemas extends Component {
         {this.state.schemaSelected !== "" && (
           <div
             css={css`
-              margin-top: 10px;
+              margin: 10px auto;
               padding: 20px;
+              text-align: center;
             `}
           >
             <AbcButton
