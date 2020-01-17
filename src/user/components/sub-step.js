@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { css } from "@emotion/core";
 
-import { DataContext } from "../../providers/DataProvider";
+import { DataContext } from "../../providers/DataProvider.js";
+import { UserContext } from "../../providers/UserProvider.js";
 import OptionCard from "./option-card";
 import { navigate } from "@reach/router";
 
@@ -10,14 +11,45 @@ const SubStep = props => {
     DataContext
   );
 
+  const {
+    company,
+    division,
+    dataFullLoadOrIncremental,
+    fileFormat,
+    updateValue
+  } = useContext(UserContext);
+
   useEffect(() => {});
 
   const getRandomColor = () => {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   };
 
-  const selectSubStepOption = opt => {
+  const selectSubStepOption = (optNum, opt) => {
     console.log("option selected! go to next sub step", opt);
+
+    if (company === null) {
+      updateValue("company", opt.optionName);
+      props.goToNextOptionSubStep();
+      return;
+    }
+    if (division === null) {
+      updateValue("division", opt.optionName);
+      props.goToNextOptionSubStep();
+      return;
+    }
+    if (dataFullLoadOrIncremental === null) {
+      updateValue("dataFullLoadOrIncremental", opt.optionName);
+      props.goToNextOptionSubStep();
+      return;
+    }
+    if (fileFormat === null) {
+      updateValue("fileFormat", opt.optionName);
+      console.log("heeere");
+      navigate(`/step`);
+      return;
+    }
+
     // go to next option sub step
     props.goToNextOptionSubStep();
   };

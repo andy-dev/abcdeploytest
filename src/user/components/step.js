@@ -5,6 +5,7 @@ import { DataContext } from "../../providers/DataProvider.js";
 import { UserContext } from "../../providers/UserProvider.js";
 import OptionCard from "./option-card";
 import { navigate } from "@reach/router";
+import UserSelections from "./user-selections.js";
 
 const Step = props => {
   // get step and updateFn from store
@@ -66,7 +67,11 @@ const Step = props => {
 
   return (
     <>
-      {currentStep.stepQuestion === null && <p>just render user selections</p>}
+      {currentStep.stepQuestion === null && (
+        <>
+          <UserSelections></UserSelections>
+        </>
+      )}
 
       {currentStep.stepQuestion !== null && (
         <>

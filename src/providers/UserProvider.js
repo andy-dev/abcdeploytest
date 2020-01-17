@@ -12,7 +12,8 @@ class UserProvider extends Component {
     company: null,
     division: null,
     dataFullLoadOrIncremental: null,
-    fileFormat: null
+    fileFormat: null,
+    filled: null
   };
 
   componentDidMount() {
@@ -36,7 +37,8 @@ class UserProvider extends Component {
       company,
       division,
       dataFullLoadOrIncremental,
-      fileFormat
+      fileFormat,
+      filled
     } = this.state;
     const { children } = this.props;
 
@@ -53,6 +55,7 @@ class UserProvider extends Component {
           division,
           dataFullLoadOrIncremental,
           fileFormat,
+          filled,
           updateValue: this.updateValue
         }}
       >
