@@ -53,7 +53,7 @@ const UserSelections = () => {
   const startTimer = () => {
     setTimeout(() => {
       closeModal();
-    }, 2000);
+    }, 5000);
   };
 
   return (

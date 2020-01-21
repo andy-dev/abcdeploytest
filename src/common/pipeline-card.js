@@ -93,7 +93,7 @@ class PipelineCard extends Component {
           `}
         >
           <div className="">Source: File</div>
-          <div className="">Target: EDP</div>
+          <div className="">Target: EAP</div>
         </div>
 
         <div
